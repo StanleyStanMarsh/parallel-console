@@ -21,7 +21,7 @@
 ## Запуск проекта
 ```bash
 # Сборка проекта
-mvn clean install
+mvn package
 
 # Запуск приложения
 java -cp target/parallel-console-1.0-SNAPSHOT.jar ru.spbstu.telematics.java.App
