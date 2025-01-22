@@ -2,7 +2,7 @@ package ru.spbstu.telematics.java;
 
 
 public class BinarySemaphore {
-    private final volatile boolean isLocked;
+    private volatile boolean isLocked;
 
     public BinarySemaphore() {
         this.isLocked = false;
