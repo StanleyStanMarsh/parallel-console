@@ -12,8 +12,11 @@ public class BinarySemaphore {
         this.isLocked = initialState;
     }
 
-    public void acquire() throws InterruptedException {
-        
+    public synchronized void acquire() throws InterruptedException {
+        while(isLocked) {
+            wait();
+        }
+        this.isLocked = true;
     }
 
     public void release() {
