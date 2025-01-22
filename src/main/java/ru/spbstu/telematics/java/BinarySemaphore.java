@@ -19,7 +19,10 @@ public class BinarySemaphore {
         this.isLocked = true;
     }
 
-    public void release() {
-
+    public synchronized void release() {
+        isLocked = false;
+        // notify так как семафор бинарный, гарантированно
+        // только 1 поток получит доступ
+        notify();
     }
 }
